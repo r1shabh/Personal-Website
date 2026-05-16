@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <!-- marked.js for Markdown parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #f5f0e8;
+      --ink:     #1c1a17;
+      --muted:   #7a7167;
+      --accent:  #b5432a;
+      --rule:    #d6cfc2;
+      --mono:    'DM Mono', monospace;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 72px 24px 56px;
+      background: var(--ink);
+      overflow: hidden;
+    }
+
+    /* decorative ruled lines */
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      height: 1px;
+      background: rgba(245,240,232,.18);
+    }
+    .hero::before { top: 28px; }
+    .hero::after  { bottom: 28px; }
+
+    .photo-ring {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      padding: 4px;
+      margin-bottom: 28px;
+      box-shadow: 0 0 0 6px rgba(181,67,42,.15);
+      transition: box-shadow .3s;
+    }
+    .photo-ring:hover { box-shadow: 0 0 0 10px rgba(181,67,42,.2); }
+
+    .photo-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      /* placeholder gradient — replace with your own photo */
+      background: linear-gradient(135deg, #3a3530 0%, #5c544a 100%);
+    }
+
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 300;
+      letter-spacing: .04em;
+      color: var(--cream);
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    .hero-tagline {
+      font-family: var(--mono);
+      font-size: .78rem;
+      font-weight: 300;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* ── LAYOUT ── */
+    .outer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 28px 100px;
+    }
+
+    /* ── MARKDOWN RENDERING ── */
+    #content h1 {
+      /* h1 is the name — already shown in hero, hide it */
+      display: none;
+    }
+
+    #content h2 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 52px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    #content h3 {
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--ink);
+      margin: 28px 0 4px;
+    }
+
+    #content p {
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+      color: #2e2b25;
+    }
+
+    #content strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    #content em {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    #content a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(181,67,42,.3);
+      transition: border-color .2s, color .2s;
+    }
+    #content a:hover {
+      color: #8a3020;
+      border-color: #8a3020;
+    }
+
+    #content ul {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+    }
+    #content ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      font-size: 1.02rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    #content ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 300;
+    }
+
+    #content hr {
+      display: none; /* decorative separators handled by h2 borders */
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 28px 0;
+      border-top: 1px solid var(--rule);
+      margin-top: 20px;
+    }
+
+    /* ── FADE-IN ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero   { animation: fadeUp .7s ease both; }
+    .outer  { animation: fadeUp .7s .18s ease both; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 500px) {
+      .photo-ring { width: 120px; height: 120px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <header class="hero">
+    <div class="photo-ring">
+      <!--
+        To use your own photo:
+          1. Place your JPG next to index.html (e.g. photo.jpg)
+          2. Change src below to "photo.jpg"
+        The placeholder below is a solid-color circle shown when no src loads.
+      -->
+      <img
+        id="profile-photo"
+        src="photo.jpg"
+        alt="Profile photo"
+        onerror="this.style.opacity='0'"
+      />
+    </div>
+    <h1 class="hero-name" id="hero-name">Your Name</h1>
+    <p class="hero-tagline" id="hero-tagline">Personal Website</p>
+  </header>
+
+  <!-- ── CONTENT ── -->
+  <main class="outer">
+    <div id="content">
+      <p style="color:var(--muted);font-family:var(--mono);font-size:.85rem;">Loading…</p>
+    </div>
+    <footer>
+      &copy; <span id="year"></span> &mdash; Built with care
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Load and render about.md ──
+    fetch('about.md')
+      .then(r => {
+        if (!r.ok) throw new Error('Could not load about.md');
+        return r.text();
+      })
+      .then(md => {
+        // Parse markdown
+        const html = marked.parse(md);
+        document.getElementById('content').innerHTML = html + `
+          <footer>
+            &copy; ${new Date().getFullYear()} &mdash; Built with care
+          </footer>`;
+
+        // Pull name from first H1 and put it in the hero
+        const firstH1 = document.querySelector('#content h1');
+        if (firstH1) {
+          document.getElementById('hero-name').textContent = firstH1.textContent;
+          document.title = firstH1.textContent;
+        }
+
+        // Pull first paragraph after H1 for a tagline (optional)
+        const firstP = document.querySelector('#content p');
+        if (firstP) {
+          // Use bold text if present as tagline, otherwise leave default
+          const bold = firstP.querySelector('strong');
+          // We'll leave the tagline as-is; users can customise hero-tagline below
+        }
+      })
+      .catch(err => {
+        document.getElementById('content').innerHTML = `
+          <p style="color:var(--accent);font-family:var(--mono);font-size:.85rem;">
+            ⚠ Could not load <strong>about.md</strong>.<br>
+            Make sure it is in the same folder as <strong>index.html</strong> and
+            that you are serving the files over HTTP (not opening index.html directly as a file://).
+          </p>`;
+      });
+  </script>
+</body>
+</html>
