@@ -39,9 +39,9 @@ Pending description
 
 ## Pending Projects
 
-**Home Books Catalog** — Android app for cataloging physical books you possess, via barcode scanning
+**[Home Books Catalog]()** — Android app for cataloging physical books you possess, via barcode scanning
 
-**Climbing Route Notebook** - Offline-first outdoor crag note app for trip planning and logistics
+**[Climbing Route Notebook]()** - Offline-first outdoor crag note app for trip planning and logistics
 
 ---
 
