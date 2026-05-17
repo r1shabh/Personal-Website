@@ -35,11 +35,13 @@ Pending description
 
 ## Projects
 
-**[Chess Drills](https://example.com)** — Chess training tool
+**[Chess Drills](https://r1shabh.github.io/Blindfold-Chess-Drills/)** — Chess training tool
 
 ## Pending Projects
 
-**[Project Beta](https://example.com)** — pending description
+**Home Books Catalog** — Android app for cataloging physical books you possess, via barcode scanning
+
+**Climbing Route Notebook** - Offline-first outdoor crag note app for trip planning and logistics
 
 ---
 
