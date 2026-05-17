@@ -46,7 +46,7 @@ Software engineer focused on backend systems, cloud infrastructure, and develope
 
 ## Projects
 
-**Chess Drills** — Chess training tool
+**[Chess Drills](https://r1shabh.github.io/Blindfold-Chess-Drills/)** — Chess training tool
 
 ## Pending Projects
 
