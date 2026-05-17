@@ -1,9 +1,9 @@
-# Jane Doe
+# Rishabh Anand
 
-**Location:** San Francisco, CA  
-**Email:** jane@example.com  
-**LinkedIn:** [linkedin.com/in/janedoe](https://linkedin.com/in/janedoe)  
-**GitHub:** [github.com/janedoe](https://github.com/janedoe)
+**Location:** DMV  
+**Email:** rishabh.anand443@gmail.com  
+**LinkedIn:** [linkedin.com/in/rishabhanand](https://www.linkedin.com/in/rishabh-a-91814490/)  
+**GitHub:** [github.com/rishabh](https://github.com/r1shabh)
 
 ---
 
@@ -23,28 +23,32 @@ Write a short bio here. Tell visitors who you are, what you do, and what makes y
 
 ## Experience
 
-**Senior Product Designer — Acme Corp** *(2022 – Present)*  
-Leading design for the core product, working closely with engineering and research teams.
+**Entarian** *(2025 – Present)*  
+Pending description
 
-**UX Designer — Startup XYZ** *(2019 – 2022)*  
-Shaped the product from 0 to 1, establishing design systems and user research practices.
+**Capital One** *(2021 – 2025)*  
+Pending description
+
+**AWS** *(2020 - 2021)*
 
 ---
 
 ## Projects
 
-**[Project Alpha](https://example.com)** — A tool that does something amazing. Built with React and Node.js.
+**[Chess Drills](https://example.com)** — Chess training tool
 
-**[Project Beta](https://example.com)** — An open-source library for doing cool things. 2k+ GitHub stars.
+## Pending Projects
+
+**[Project Beta](https://example.com)** — pending description
 
 ---
 
 ## Education
 
-**B.S. Computer Science** — University of California, Berkeley *(2019)*
+**B.S. Computer Science** — Virginia Tech *(2020)*
 
 ---
 
 ## Interests
 
-When I'm not working, you'll find me hiking, reading science fiction, or obsessing over a good cup of coffee.
+When I'm not working, you'll find me at the climbing gym, reading, watching tv or anime
