@@ -48,11 +48,9 @@ Software engineer focused on backend systems, cloud infrastructure, and develope
 
 **[Chess Drills](https://r1shabh.github.io/Blindfold-Chess-Drills/)** — Chess training tool
 
-## Pending Projects
-
 **Home Books Catalog** — Android app for cataloging physical books you possess, via barcode scanning
 
-**Climbing Route Notebook** - Offline-first outdoor crag note app for trip planning and logistics
+**[Climbing Route Notebook](climbing.html)** - Offline-first outdoor crag note app for trip planning and logistics
 
 ---
 
