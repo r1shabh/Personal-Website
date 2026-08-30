@@ -12,19 +12,19 @@ Android, Offline-first, Trip Planning
 ## Screenshots
 
 ### crag-list.png
-Your description for screenshot 1 goes here.
+Homepage. Shows list of crags the user may want to visit
 
 ### crag-description.png
-Your description for screenshot 2 goes here.
+Overview of the crag, with place for description, gps coordinates, and links to sections in crag
 
 ### route-list.png
-Your description for screenshot 3 goes here.
+Has description of section, where it is recommended to put details of the approach and how to find the section. It also has the list of routes in the section
 
 ### route-description.png
-Your description for screenshot 4 goes here.
+Description of a specific route, including whether it's sport, trad, or toprope, the grade, height, number of bolts (for sport routes). It is recommended that you put ways of identifying the route in the description space
 
 ### link-to-navigation.png
-Your description for screenshot 5 goes here.
+Demo of the navigation link for a crag
 
 ### google-maps-to-crag.png
-Your description for screenshot 6 goes here.
+google maps page of crag, sent from navigation link in notebook app
