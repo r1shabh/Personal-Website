@@ -11,20 +11,20 @@ Android, Offline-first, Trip Planning
 
 ## Screenshots
 
-### climbing/crag-list.png
+### crag-list.png
 Your description for screenshot 1 goes here.
 
-### climbing/crag-description.png
+### crag-description.png
 Your description for screenshot 2 goes here.
 
-### climbing/route-list.png
+### route-list.png
 Your description for screenshot 3 goes here.
 
-### climbing/route-description.png
+### route-description.png
 Your description for screenshot 4 goes here.
 
-### climbing/link-to-navigation.png
+### link-to-navigation.png
 Your description for screenshot 5 goes here.
 
-### climbing/google-maps-to-crag.png
+### google-maps-to-crag.png
 Your description for screenshot 6 goes here.
